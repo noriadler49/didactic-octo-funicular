@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Hàng Hóa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="addAppointmentForm"> <!--addProductForm -->
+        <h2>Make an appointment</h2>
+        <form id="appointmentForm" onsubmit="saveAppointment(); return false;">
+            <label for="patientName">Patient's full name:</label>
+            <input type="text" id="patientName" name="patientName" required autofocus>
+            <br>
+        
+            <label for="patientNumber">Phone number:</label>
+            <input type="text" id="patientNumber" name="patientNumber" required>
+            <br>
+        
+            <label for="spec">Speciality:</label>
+            <select id="spec" name="spec" required>
+                <option value="1">Internal Medicine</option>
+                <option value="2">Surgery</option>
+            </select>
+            <br>
+        
+            <label for="doctorType">Doctor Type:</label>
+            <select id="doctorType" name="doctorType" required onchange="updateDoctor()">
+                <option value="internal">Internal</option>
+                <option value="foreign">Foreign</option>
+            </select>
+            <br>
+        
+            <label for="doctor">Doctor:</label>
+            <select id="doctor" name="doctor" required>
+            </select>
+            <br>
+        
+            <input type="submit" value="Submit">
+            <input type="reset" value="Re Enter">
+        </form>
+        
+        
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
